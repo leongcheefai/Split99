@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Global variables */
+$primary: #0d47a1;
+$primaryL: #5472d3;
+$primaryD: #002171;
+$secondary: #ffab00;
+$secondaryL: #ffdd4b;
+$secondaryD: #c67c00;
+$textonP: #ffffff;
+$textonS: #000000;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,33 @@
+<div class="div-split">
+  <div class="amount-display">
+    <h2>Everyone have to pay :</h2>
+    <p><strong>MYR</strong> {{ amount | number:'1.2-2' }}</p>
+  </div>
+  <div fxLayout fxLayoutGap="5px" [formGroup]="splittingForm" fxLayout.lt-sm="column">
+    <mat-form-field fxFlex>
+      <mat-label>Total Amount</mat-label>
+      <input type="number" matInput placeholder="0.00" formControlName="amount" step=".01">
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <mat-label>No. of people</mat-label>
+      <input type="number" matInput placeholder="0" inputmode="numeric" formControlName="totalPeople">
+    </mat-form-field>
+  </div>
+  <div class="div-option" fxLayoutAlign="start">
+      <mat-checkbox [(ngModel)]="isSST">SST</mat-checkbox>
+      <mat-checkbox [(ngModel)]="isServiceCharge">Services Charge</mat-checkbox>
+  </div>
+  <div fxLayoutGap="5px">
+    <button class="button" mat-flat-button color="accent" (click)="splitBill()" fxFlex>Split Manually</button>
+    <button class="button" mat-flat-button color="accent" fxFlex (click)="reset()">Reset</button>
+  </div>
+  <div class="strike">
+    <span>
+      or
+    </span>
+  </div>
+  <div class="camera">
+    <p>Take a photo</p>
+    <button mat-icon-button color="accent"><mat-icon>camera_alt</mat-icon></button>
+  </div>
+</div>
